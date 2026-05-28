@@ -19,10 +19,10 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm install
-
-      - name: Run tests 
-        run: npx jest --forceExit
+        run: npm ci
+        
+      - name: Run tests
+        run: npm test
 
   deploy:
     needs: test
